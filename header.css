@@ -1,0 +1,142 @@
+header{
+    height: 62px;
+    width: 100%;
+    display: flex;
+    padding: 20px;
+  margin: 0 auto;
+    background-color: #fff;
+    position: relative;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.25);
+  
+  }
+  .header_inner{
+  position: relative;
+  width: 1464px;
+  margin: 0 auto;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  
+  }
+  
+  .logo img {margin-left: 30px;
+  
+  
+  }
+  
+  nav{
+  }
+  
+  nav ul {
+    
+    
+    font-size: 21px;
+    z-index: 10;
+    
+    display: flex;
+    gap: 109px;
+  }
+  
+  nav ul li a {
+  
+    color: var(--hfft);
+    font-weight: bold;
+  }
+  
+  .login{
+    text-align: center;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 50px;
+    font-size: 24px;
+    color: #fff;
+    background-color: var(--btnlogin);
+    box-shadow: 0 7px 1px var(--btnshadow);
+    font-weight: 600; 
+    width: 142px;
+    height: 38px;
+    cursor: pointer;
+  }
+  
+  
+  
+  
+  p.cyber{
+    letter-spacing: -1px;
+  }
+  
+  .menu-icon{
+  color: var(--btnlogin);
+  display: none;
+  }
+  
+  
+  
+  /* 서브메뉴 */
+  
+  
+  ul.sub{
+    position: absolute;
+    border-radius: 0 0 20px 20px;
+    margin-top: 18px;
+    padding-top: 27px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 27px;
+    width: 230px;
+    height: 270px;
+    font-size: 16px;
+    margin-left: -70px;
+    background-color: #E9F1F9;
+    display: none;
+    transition: 1s;
+  }
+  
+  li.sub_li{
+    transition: 1s;
+  }
+  
+  
+  nav > ul > li{
+  
+  }
+  nav > ul > li:before{
+  }
+  
+  
+  
+  
+  ul.sub>a{}
+  
+  
+  .login{
+      text-align: center;
+      letter-spacing: 1px;
+      border: none;
+      border-radius: 50px;
+      font-size: 24px;
+      color: #fff;
+      background-color: var(--btnlogin);
+      box-shadow: 0 7px 1px var(--btnshadow);
+      font-weight: 600; 
+      width: 142px;
+      height: 38px;
+      cursor: pointer;
+      transition: .3s;
+  }
+  
+  .login:hover{
+    background-color: var(--btnshadow);
+  
+  
+  }
+  
+  .notifi_side_img>img{
+    position: absolute;
+    top: 1200px;
+    right: 0;
+  
+  }
+  
+  

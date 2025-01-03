@@ -1,0 +1,335 @@
+@media screen and (max-width:700px) {
+    
+
+
+
+/* 헤더 */
+.container{width: 100%;}
+
+header{}
+
+.logo a img{
+margin-left: -5%;
+    scale: 0.8;
+}
+
+nav{
+    display: none;
+}
+
+.login_btn{
+  position: absolute;
+  scale: 0.7;
+  left: 50%;
+
+} 
+
+/* 메인 */
+
+.main{
+    align-items: center;
+    margin: 0 auto;
+    height: 200px;
+
+
+
+
+
+}
+
+
+.title, .title_box{
+    top: -20%;
+    right: 83.5%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+   
+
+
+
+
+
+}
+
+.title>h1{
+    font-size: 32px;
+    line-height: 44px;
+
+
+
+}
+
+
+.title_box{
+
+    margin-left: -145px;
+    margin-top: -3px;
+    width: 102px;
+    height: 42px;
+
+
+
+  
+  }
+
+  .ft_white{
+    margin-left: 30px;
+    margin-right: 5px;
+
+  }
+
+  .main_button{
+    margin-top: -10px;
+    scale: 0.6;
+    
+
+  }
+
+.main_visual{
+    display: none;
+
+}
+
+
+/* 섹션1 */
+
+.commu{
+    margin-top: 100px;
+    flex-direction: column;
+    height: auto;
+
+}
+
+
+.commu_title, .sns_wrap{
+ scale: 0.8;
+
+}
+.commu_title{
+    margin-top: 50px;
+}
+
+.sns_wrap{
+    margin-top: -50px;
+}
+
+
+
+.snsSwiper {
+  margin: 50px 0;
+
+}
+
+.swiper-wrapper {
+
+    width: 925px;
+    height: 482px;
+}
+
+.swiper-slide{
+
+
+    padding: 0 50px;
+
+}
+
+.swiper-button-next, .swiper-button-prev{
+    display: none;
+
+}
+
+  
+.slide_img{
+margin-left: -30px;
+}   
+.snsSwiper::before {
+
+    display: none;
+}
+.snsSwiper::after {
+display: none;
+  
+}
+
+.sns_wrap{
+
+}
+
+
+/* 섹션 2 공지사항 */
+
+.notifi_title{
+    margin-top: 100px;
+    width: 80%;
+    margin-left: -50px;
+    scale: 0.8;
+    
+
+}
+
+.notifi{
+width: 100%;
+height: 1200px;
+}
+.notifi_inner{
+  margin-top: 50px;
+width: 100%;}
+
+.notifi_title>p{
+margin-left: -200px;
+}
+
+.notice_wrap{
+
+flex-direction: column;
+width: 100%;
+gap: 1px;
+margin: auto;
+
+
+}
+
+.notice_box{
+margin: 0 auto;
+margin-top: 100px;
+
+}
+
+
+/* 섹션3 가입절차 */
+
+.join > .join_inner {
+    width: 100%;
+    height: 900px;
+
+
+  }
+
+  .join_inner {
+    width: 100%;
+    height: auto;
+  }
+
+  .clipboard_box {
+    background: none;
+    box-shadow: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .clipboard_box_inner {
+    margin-top: 80px;
+    width: 95%;
+    height: 105%;
+
+    box-shadow: 0 0 5px rgba(128, 128, 128, 0.508);
+  }
+
+
+  .top_deco, .top_deco_inner {
+
+
+  }
+
+  ul.process {
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    left: 0px;
+    top: 80px;
+    position: relative;
+  }
+
+  ul.process>li.box {
+    width: 150px;
+    height: 147px;
+    margin: 10px auto;
+    border-radius: 30px;
+  }
+
+  ul.process > li.box > img {
+    width: 30%;
+    height: auto;
+  }
+
+
+  li.arrow_d,
+  li.arrow_l,
+  li.arrow_r {
+    display: none;
+  }
+
+
+  p.process_title { font-size: 0.9rem;}
+  p.process_text{font-size: 0.7rem;}
+
+/* 허공 배경 이미지들 */
+.notifi_side_img ,.sec3_img{
+    display: none;
+
+}
+
+
+
+
+.banner{
+    width: 100%;
+    height: auto;
+}
+
+li.banner_img > a > img{
+height: auto;
+justify-content: center;
+
+}
+
+
+span.banner_title{
+  display: none;
+}
+
+
+
+/* 푸터 */
+
+.footer{width: 100%;}
+.footer_inner{
+
+width: 100%;
+height: auto;}
+.footer_content{
+font-size: 14px;
+width: 100%;
+height: auto;
+align-items: center;
+justify-content: center;
+display: flex;
+flex-direction: column;
+}
+.footer_logo{padding: 0;}
+
+.footer_text{
+  padding-top: 20px;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  flex-wrap: wrap;
+  }
+
+ul.footer_right{
+width: 100%;
+text-align: center;
+align-items: center;
+justify-content: center;
+padding-top: 30px;
+margin: 0;
+
+
+}
+
+.log_in{
+width: 100%;
+height: auto;
+}
+}

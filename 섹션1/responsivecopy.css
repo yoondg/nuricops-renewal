@@ -1,0 +1,13 @@
+@media screen and (max-width:700px) {
+    .commu{
+        flex-direction: column;
+        height: auto;
+    }
+
+
+
+ .snsSwiper{
+    
+ }
+
+}

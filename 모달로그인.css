@@ -1,0 +1,126 @@
+/* XEION CDN */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+:root{
+    --hfft : #4d4d4d; 
+    --btnlogin : #186da8;
+    --btnshadow : #1b437d;
+    --mainftblue : #0073C4;
+    --mainftbox : #FC0400;
+    --slidebox: #CCE2F1 #F4E5C6;
+    --snsbar :  #4799D4;
+    --notifibar : #FE9449;
+    --noticebox : #FEF2DD;
+    --noticeft : #883B05;
+    --deco : #95CAD6 #3EA2B8;
+    --join : #E9F1F9 #D2E3F3;
+    --decoinner : #2D6D92;
+    --process: #F5F9F9;
+    --joinft : #3EA2B8;
+    --joinaft : #004575;}
+
+
+.modal_login{
+    background-color: #7575758a;
+    position: fixed;
+    left: 0;top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+/*     display: none;  */ /* 숨겨놓기 */
+  }
+  .log_in{
+    width: 450px;
+    height: 500px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--process);
+    border-radius: 20px; padding: 50px;
+   
+  }
+  .log_in > h1{ 
+    color: #222;
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 10px;}
+  .log_in input[type=text],
+  .log_in input[type=password]{
+    width: 100%; padding: 15px 10px;
+   border-radius: 5px;
+    background-color: #e9f3f4;
+    border: 1px solid #3EA2B8;
+  }
+  .log_in input[type=text]{
+    margin-bottom: 10px;
+}
+.log_in input[type=password]{
+margin-bottom: 10px;
+}
+
+
+
+
+  .log_in input[type=text]{
+    background: url(images/id_img.png) no-repeat center left 10px;
+    background-size: 4%;
+
+  }
+  .log_in input[type=password]{
+    background: url(images/password_img.png) no-repeat center left 10px;  ;
+    background-size: 4%;
+  }
+
+  .log_in input[type=button]{width: 100%;
+    background-color: var(--joinft);
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin: 10px 0;    
+    transition: .1s;
+}
+.log_in input[type=button]:hover{
+background-color: #0D6679;
+}
+
+  label.check{
+    margin-left: 10px;
+    font-size: 14px;}
+
+  p.login_text {
+    font-size: 14px;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 15px;
+    
+  }
+  p.login_text > a{
+color: var(--joinft);
+text-decoration: underline;
+font-weight: 600;
+}
+
+  .login_bottom{
+    text-align: center;
+    font-size: 14px;
+
+}
+.pw:hover{color: #000 }
+ .id:hover{color: #000 }
+ .join:hover{color: #000 }
+            
+
+.xi-close{
+    font-size: 36px;
+     cursor: pointer;
+      position: absolute;
+      color: #4d4d4d;
+       right: 25px; top: 20px;}
+  
+  /* show 클래스가 있을 때 모달 보이게 */
+  .modal-login.show{ display: block;}

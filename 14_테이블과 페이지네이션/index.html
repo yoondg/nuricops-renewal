@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>페이지네이션이 있는 테이블 예제</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+<div class="pagination">
+  <i class="fa-solid fa-left-long"></i>
+  <ol id="numbers">
+    <li><a href="">1</a></li>
+    <li><a href="">2</a></li>
+    <li><a href="">3</a></li>
+  </ol>
+  <i class="fa-solid fa-right-long"></i>
+</div>
+<table id="my-table">
+  <colgroup>
+    <col class="col1">
+    <col class="col2">
+    <col class="col3">
+    <col class="col4">
+    <col class="col5">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>아이디</th>
+      <th>이름</th>
+      <th>생년월일</th>
+      <th>주소</th>
+      <th>국가</th>
+      <th>나이</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>김철수</td>
+      <td>2019년 3월 14일</td>
+      <td>서울시 강남구</td>
+      <td>한국</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>이영희</td>
+      <td>2018년 5월 15일</td>
+      <td>부산시 해운대구</td>
+      <td>한국</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>박지민</td>
+      <td>2019년 5월 13일</td>
+      <td>대구시 수성구</td>
+      <td>한국</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>최민수</td>
+      <td>2020년 1월 12일</td>
+      <td>광주시 북구</td>
+      <td>한국</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>정지훈</td>
+      <td>2018년 12월 18일</td>
+      <td>인천시 남동구</td>
+      <td>한국</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>홍길동</td>
+      <td>2018년 7월 4일</td>
+      <td>경기도 수원시</td>
+      <td>한국</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>강다니엘</td>
+      <td>2020년 1월 5일</td>
+      <td>대전시 서구</td>
+      <td>한국</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>김유나</td>
+      <td>2018년 5월 6일</td>
+      <td>울산시 남구</td>
+      <td>한국</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>한지민</td>
+      <td>2019년 7월 31일</td>
+      <td>충북 청주시</td>
+      <td>한국</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>박보검</td>
+      <td>2018년 12월 5일</td>
+      <td>전남 목포시</td>
+      <td>한국</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>송혜교</td>
+      <td>2019년 1월 11일</td>
+      <td>경남 창원시</td>
+      <td>한국</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>유재석</td>
+      <td>2019년 12월 6일</td>
+      <td>경북 구미시</td>
+      <td>한국</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>박명수</td>
+      <td>2019년 9월 15일</td>
+      <td>제주도 제주시</td>
+      <td>한국</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>정형돈</td>
+      <td>2019년 5월 31일</td>
+      <td>대전시 유성구</td>
+      <td>한국</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>노홍철</td>
+      <td>2020년 3월 17일</td>
+      <td>경남 진주시</td>
+      <td>한국</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>조세호</td>
+      <td>2019년 3월 25일</td>
+      <td>전북 전주시</td>
+      <td>한국</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>김종국</td>
+      <td>2020년 1월 11일</td>
+      <td>부산시 부산진구</td>
+      <td>한국</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>하하</td>
+      <td>2019년 12월 24일</td>
+      <td>서울시 서초구</td>
+      <td>한국</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>양세형</td>
+      <td>2019년 4월 23일</td>
+      <td>경기도 성남시</td>
+      <td>한국</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>양세찬</td>
+      <td>2018년 11월 21일</td>
+      <td>충남 천안시</td>
+      <td>한국</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>김지민</td>
+      <td>2019년 1월 2일</td>
+      <td>광주시 동구</td>
+      <td>한국</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>유민상</td>
+      <td>2019년 10월 15일</td>
+      <td>서울시 은평구</td>
+      <td>한국</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>정준하</td>
+      <td>2020년 3월 22일</td>
+      <td>서울시 중구</td>
+      <td>한국</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>신동엽</td>
+      <td>2019년 6월 11일</td>
+      <td>부산시 동래구</td>
+      <td>한국</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>김구라</td>
+      <td>2019년 2월 20일</td>
+      <td>서울시 노원구</td>
+      <td>한국</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>전현무</td>
+      <td>2020년 4월 4일</td>
+      <td>서울시 강동구</td>
+      <td>한국</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>이수근</td>
+      <td>2020년 3월 7일</td>
+      <td>서울시 동작구</td>
+      <td>한국</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>김준호</td>
+      <td>2018년 6월 4일</td>
+      <td>전남 여수시</td>
+      <td>한국</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>서장훈</td>
+      <td>2020년 3월 19일</td>
+      <td>서울시 송파구</td>
+      <td>한국</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>안정환</td>
+      <td>2018년 8월 5일</td>
+      <td>충북 청주시</td>
+      <td>한국</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td>이동국</td>
+      <td>2018년 4월 29일</td>
+      <td>전북 전주시</td>
+      <td>한국</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>김성주</td>
+      <td>2019년 5월 5일</td>
+      <td>강원도 춘천시</td>
+      <td>한국</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td>조우종</td>
+      <td>2020년 1월 21일</td>
+      <td>서울시 중랑구</td>
+      <td>한국</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td>배성재</td>
+      <td>2018년 5월 18일</td>
+      <td>경기도 용인시</td>
+      <td>한국</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>윤종신</td>
+      <td>2019년 4월 26일</td>
+      <td>충남 아산시</td>
+      <td>한국</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td>이경규</td>
+      <td>2020년 2월 13일</td>
+      <td>경북 포항시</td>
+      <td>한국</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td>탁재훈</td>
+      <td>2018년 5월 14일</td>
+      <td>경기도 부천시</td>
+      <td>한국</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>38</td>
+      <td>김태호</td>
+      <td>2019년 12월 26일</td>
+      <td>경기도 고양시</td>
+      <td>한국</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>39</td>
+      <td>김구라</td>
+      <td>2019년 12월 5일</td>
+      <td>서울시 강서구</td>
+      <td>한국</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td>허재</td>
+      <td>2019년 6월 6일</td>
+      <td>경기도 화성시</td>
+      <td>한국</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>41</td>
+      <td>허정무</td>
+      <td>2019년 11월 15일</td>
+      <td>서울시 성북구</td>
+      <td>한국</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>42</td>
+      <td>박지성</td>
+      <td>2018년 6월 17일</td>
+      <td>경기도 하남시</td>
+      <td>한국</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>43</td>
+      <td>차두리</td>
+      <td>2018년 6월 17일</td>
+      <td>경기도 시흥시</td>
+      <td>한국</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>44</td>
+      <td>설기현</td>
+      <td>2018년 6월 3일</td>
+      <td>서울시 동대문구</td>
+      <td>한국</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td>안정환</td>
+      <td>2020년 3월 14일</td>
+      <td>서울시 서대문구</td>
+      <td>한국</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>46</td>
+      <td>이천수</td>
+      <td>2020년 2월 19일</td>
+      <td>서울시 마포구</td>
+      <td>한국</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>47</td>
+      <td>이동국</td>
+      <td>2018년 10월 27일</td>
+      <td>경기도 평택시</td>
+      <td>한국</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>48</td>
+      <td>김연경</td>
+      <td>2019년 7월 24일</td>
+      <td>서울시 금천구</td>
+      <td>한국</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>49</td>
+      <td>박세리</td>
+      <td>2019년 4월 8일</td>
+      <td>경남 김해시</td>
+      <td>한국</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>신아람</td>
+      <td>2019년 3월 2일</td>
+      <td>경남 진주시</td>
+      <td>한국</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <td>51</td>
+      <td>조영남</td>
+      <td>2019년 12월 16일</td>
+      <td>서울시 종로구</td>
+      <td>한국</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>52</td>
+      <td>장윤정</td>
+      <td>2019년 7월 11일</td>
+      <td>경기도 남양주시</td>
+      <td>한국</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <td>53</td>
+      <td>임영웅</td>
+      <td>2019년 7월 19일</td>
+      <td>강원도 강릉시</td>
+      <td>한국</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>54</td>
+      <td>영탁</td>
+      <td>2018년 11월 27일</td>
+      <td>대구시 북구</td>
+      <td>한국</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>55</td>
+      <td>이찬원</td>
+      <td>2018년 9월 13일</td>
+      <td>경북 안동시</td>
+      <td>한국</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>56</td>
+      <td>김호중</td>
+      <td>2019년 11월 2일</td>
+      <td>충북 충주시</td>
+      <td>한국</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>57</td>
+      <td>정동원</td>
+      <td>2019년 2월 14일</td>
+      <td>경남 함양군</td>
+      <td>한국</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>58</td>
+      <td>장민호</td>
+      <td>2018년 11월 9일</td>
+      <td>경기도 김포시</td>
+      <td>한국</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>59</td>
+      <td>남진</td>
+      <td>2018년 11월 9일</td>
+      <td>서울시 서대문구</td>
+      <td>한국</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>60</td>
+      <td>나훈아</td>
+      <td>2019년 2월 15일</td>
+      <td>서울시 양천구</td>
+      <td>한국</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>61</td>
+      <td>이선희</td>
+      <td>2020년 3월 9일</td>
+      <td>서울시 중구</td>
+      <td>한국</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <td>62</td>
+      <td>양희은</td>
+      <td>2020년 1월 9일</td>
+      <td>서울시 서초구</td>
+      <td>한국</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>63</td>
+      <td>이효리</td>
+      <td>2019년 11월 15일</td>
+      <td>서울시 성동구</td>
+      <td>한국</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>64</td>
+      <td>비</td>
+      <td>2020년 3월 31일</td>
+      <td>서울시 송파구</td>
+      <td>한국</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>65</td>
+      <td>유희열</td>
+      <td>2018년 5월 8일</td>
+      <td>서울시 관악구</td>
+      <td>한국</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>66</td>
+      <td>유희열</td>
+      <td>2019년 7월 10일</td>
+      <td>서울시 서초구</td>
+      <td>한국</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>67</td>
+      <td>김태호</td>
+      <td>2019년 11월 11일</td>
+      <td>서울시 종로구</td>
+      <td>한국</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>68</td>
+      <td>김태호</td>
+      <td>2019년 3월 27일</td>
+      <td>서울시 강북구</td>
+      <td>한국</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>69</td>
+      <td>유희열</td>
+      <td>2019년 8월 25일</td>
+      <td>서울시 중구</td>
+      <td>한국</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>70</td>
+      <td>정형돈</td>
+      <td>2018년 8월 22일</td>
+      <td>서울시 마포구</td>
+      <td>한국</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>71</td>
+      <td>노홍철</td>
+      <td>2018년 6월 22일</td>
+      <td>서울시 성동구</td>
+      <td>한국</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>72</td>
+      <td>김성주</td>
+      <td>2018년 10월 19일</td>
+      <td>서울시 노원구</td>
+      <td>한국</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <td>73</td>
+      <td>정형돈</td>
+      <td>2019년 7월 22일</td>
+      <td>서울시 강북구</td>
+      <td>한국</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>74</td>
+      <td>노홍철</td>
+      <td>2018년 6월 28일</td>
+      <td>서울시 강남구</td>
+      <td>한국</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>75</td>
+      <td>김성주</td>
+      <td>2019년 12월 23일</td>
+      <td>서울시 강서구</td>
+      <td>한국</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>76</td>
+      <td>김성주</td>
+      <td>2019년 11월 10일</td>
+      <td>서울시 서초구</td>
+      <td>한국</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>77</td>
+      <td>김태호</td>
+      <td>2019년 7월 9일</td>
+      <td>서울시 강북구</td>
+      <td>한국</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>78</td>
+      <td>유희열</td>
+      <td>2019년 2월 8일</td>
+      <td>서울시 성동구</td>
+      <td>한국</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>79</td>
+      <td>정형돈</td>
+      <td>2018년 12월 18일</td>
+      <td>서울시 성북구</td>
+      <td>한국</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>80</td>
+      <td>정형돈</td>
+      <td>2018년 12월 10일</td>
+      <td>서울시 서대문구</td>
+      <td>한국</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>81</td>
+      <td>유희열</td>
+      <td>2018년 6월 3일</td>
+      <td>서울시 종로구</td>
+      <td>한국</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>82</td>
+      <td>김태호</td>
+      <td>2018년 10월 17일</td>
+      <td>서울시 강동구</td>
+      <td>한국</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>83</td>
+      <td>정형돈</td>
+      <td>2019년 6월 20일</td>
+      <td>서울시 관악구</td>
+      <td>한국</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>84</td>
+      <td>노홍철</td>
+      <td>2020년 1월 6일</td>
+      <td>서울시 중랑구</td>
+      <td>한국</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>85</td>
+      <td>김성주</td>
+      <td>2019년 8월 14일</td>
+      <td>서울시 금천구</td>
+      <td>한국</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>86</td>
+      <td>정형돈</td>
+      <td>2020년 2월 29일</td>
+      <td>서울시 송파구</td>
+      <td>한국</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td>87</td>
+      <td>노홍철</td>
+      <td>2019년 8월 17일</td>
+      <td>서울시 서대문구</td>
+      <td>한국</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>88</td>
+      <td>유희열</td>
+      <td>2018년 10월 26일</td>
+      <td>서울시 은평구</td>
+      <td>한국</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>89</td>
+      <td>김태호</td>
+      <td>2019년 10월 23일</td>
+      <td>서울시 종로구</td>
+      <td>한국</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>90</td>
+      <td>정형돈</td>
+      <td>2019년 6월 28일</td>
+      <td>서울시 강남구</td>
+      <td>한국</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>91</td>
+      <td>유희열</td>
+      <td>2018년 6월 27일</td>
+      <td>서울시 강서구</td>
+      <td>한국</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>92</td>
+      <td>김태호</td>
+      <td>2019년 12월 9일</td>
+      <td>서울시 중구</td>
+      <td>한국</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>93</td>
+      <td>노홍철</td>
+      <td>2019년 7월 7일</td>
+      <td>서울시 강남구</td>
+      <td>한국</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td>94</td>
+      <td>유희열</td>
+      <td>2019년 1월 1일</td>
+      <td>서울시 노원구</td>
+      <td>한국</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>95</td>
+      <td>정형돈</td>
+      <td>2019년 8월 30일</td>
+      <td>서울시 송파구</td>
+      <td>한국</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>96</td>
+      <td>노홍철</td>
+      <td>2019년 8월 1일</td>
+      <td>서울시 강서구</td>
+      <td>한국</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>97</td>
+      <td>유희열</td>
+      <td>2018년 7월 29일</td>
+      <td>서울시 노원구</td>
+      <td>한국</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>98</td>
+      <td>김태호</td>
+      <td>2019년 8월 20일</td>
+      <td>서울시 마포구</td>
+      <td>한국</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>99</td>
+      <td>정형돈</td>
+      <td>2020년 4월 9일</td>
+      <td>서울시 동작구</td>
+      <td>한국</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>100</td>
+      <td>노홍철</td>
+      <td>2019년 8월 6일</td>
+      <td>서울시 관악구</td>
+      <td>한국</td>
+      <td>22</td>
+    </tr>
+  </tbody>
+</table>
+<script src="script.js"></script>
+</body>
+</html>

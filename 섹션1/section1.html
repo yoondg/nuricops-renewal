@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>누리캅스</title>
+  <link rel="stylesheet" href="reset윤다경.css">
+  <link rel="stylesheet" href="section1.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="responsivecopy.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- 섹션1 -->
+    <section class="commu">
+      <div class="swiper snsSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#none">
+              <div class="slide_img">
+                <img class="slide" src="images/visual1.jpg" alt="">
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none">
+              <div class="slide_img">
+                <img class="slide" src="images/visual2.jpg" alt="">
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none">
+              <div class="slide_img">
+                <img class="slide" src="images/visual3.jpg" alt="">
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none">
+              <div class="slide_img">
+                <img class="slide" src="images/visual4.jpg" alt="">
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- 슬라이드 내비게이션 및 페이지네이션 -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+
+      <div class="title_icon">
+        <p class="commu_title sns">경찰청 SNS</p>
+        <div class="commu_inner">
+          <div class="sns_wrap">
+            <!-- SNS 아이콘 그룹 -->
+            <div class="youtube">
+              <a href="#none">
+                <img class="sns" src="images/icon_youtube.svg" alt="유튜브">
+              </a>
+            </div>
+            <div class="tistory">
+              <a href="#none">
+                <img class="sns" src="images/icon_tistory.svg" alt="티스토리">
+              </a>
+            </div>
+            <div class="kakao">
+              <a href="#none">
+                <img class="sns" src="images/icon_kakaostory.svg" alt="카카오스토리">
+              </a>
+            </div>
+            <div class="blog">
+              <a href="#none">
+                <img class="sns" src="images/icon_naverBlog.svg" alt="네이버블로그">
+              </a>
+            </div>
+            <div class="band">
+              <a href="#none">
+                <img class="sns" src="images/icon_band.svg" alt="네이버밴드">
+              </a>
+            </div>
+            <div class="facebook">
+              <a href="#none">
+                <img class="sns" src="images/icon_facebook.svg" alt="페이스북">
+              </a>
+            </div>
+            <div class="instagram">
+              <a href="#none">
+                <img class="sns" src="images/icon_instagram.svg" alt="인스타그램">
+              </a>
+            </div>
+            <div class="x">
+              <img class="sns" src="images/icon_X.svg" alt="X">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Swiper JS 추가 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".snsSwiper", {
+        slidesPerView: 3, // 기본 보여지는 슬라이드 개수
+        spaceBetween: 30, // 슬라이드 간 간격
+        centeredSlides: true, // 활성화된 슬라이드 가운데 위치
+        initialSlide: 1,
+        loop: true, // 무한 루프 설정
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          // 768px 이하 화면에서는 한 개의 슬라이드만 보이도록 설정
+          768: {
+            slidesPerView: 1, // 작은 화면에서 슬라이드 1개 보임
+            spaceBetween: 10, // 작은 화면에서 슬라이드 간격 줄임
+          },
+          1024: {
+            slidesPerView: 3, // 데스크탑에서 슬라이드 3개 보임
+            spaceBetween: 30, // 데스크탑에서 슬라이드 간격
+          },
+        },
+      });
+
+
+
+    </script>
+  </div>
+</body>
+
+</html>

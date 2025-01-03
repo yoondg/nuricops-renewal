@@ -1,0 +1,768 @@
+
+
+:root{
+  --hfft : #4d4d4d; 
+  --btnlogin : #186da8;
+  --btnshadow : #1b437d;
+  --mainftblue : #0073C4;
+  --mainftbox : #FC0400;
+  --slidebox: #CCE2F1 #F4E5C6;
+  --snsbar :  #4799D4;
+  --notifibar : #FE9449;
+  --noticebox : #FEF2DD;
+  --noticeft : #883B05;
+  --deco : #95CAD6 #3EA2B8;
+  --join : #E9F1F9 #D2E3F3;
+  --decoinner : #2D6D92;
+  --process: #F5F9F9;
+  --joinft : #3EA2B8;
+  --joinaft : #004575;
+}
+
+
+
+/* 헤더 */
+header {
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  background-color: #fff;
+  position: relative;
+  box-shadow: 0 0px 5px #c7c7c7;
+}
+.header_inner {
+  position: relative;
+  width: 1464px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo img {margin-left: 30px;}
+nav {}
+nav>ul {
+  font-size: 21px;
+  z-index: 10;
+  display: flex;
+  width: 900px;
+  height: 62px;
+ 
+}
+nav>ul>li{
+  flex: 1;
+  text-align: center;
+  line-height: 62px;
+ 
+  transition: .3s;
+}
+nav>ul>li:hover{
+background-color: #eee;
+}
+nav>ul>li>a {
+  color: var(--hfft);
+  font-weight: bold;
+  transition: .3s;
+}
+nav>ul>li>a:hover{
+color: var(--btnshadow);
+}
+.login {
+  text-align: center;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 50px;
+  font-size: 24px;
+  color: #fff;
+  background-color: var(--btnlogin);
+  box-shadow: 0 7px 1px var(--btnshadow);
+  font-weight: 600;
+  width: 142px;
+  height: 38px;
+  cursor: pointer;
+}
+p.cyber {
+  letter-spacing: -1px;
+}
+.menu-icon {
+  color: var(--btnlogin);
+  display: none;
+}
+/* 서브메뉴 */
+ul.sub {
+  position: absolute;
+  width: 178px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 18px;
+  background-color: #E9F1F9;
+box-shadow: 0 0px 5px #00000028;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease, opacity .3s ease;
+  opacity: 0;
+  border-radius: 0 0 10px 10px;
+
+}
+li.sub_li {
+  
+}
+ul>.sub_li>a{
+
+}
+ul>.sub_li>a:hover{
+color: var(--btnshadow);
+font-weight: bold;
+transition: .1s;
+}
+nav>ul>li {
+}
+nav>ul>li>a{ display: block; }
+nav>ul>li:hover .sub {
+  max-height: 500px; /* 실제 콘텐츠 높이에 맞게 설정 */
+  opacity: 1;
+
+
+}
+ul.sub>a {}
+.login {
+  text-align: center;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 50px;
+  font-size: 24px;
+  color: #fff;
+  background-color: var(--btnlogin);
+  box-shadow: 0 7px 1px var(--btnshadow);
+  font-weight: 600;
+  width: 142px;
+  height: 38px;
+  cursor: pointer;
+  transition: .3s;
+}
+.login:hover {
+  background-color: var(--btnshadow);
+}
+.notifi_side_img>img {
+  position: absolute;
+  top: 1200px;
+  right: 0;
+}
+
+/* 아코디언 */
+
+
+.accordion {
+  display: none;
+}
+
+@media (max-width : 768px) {
+  nav{
+    display: none;
+  }
+  .accordion{
+    display: block;
+  }
+  .menu-icon {
+    color: var(--btnlogin);
+    display: block;
+    scale: 0.7;
+  }
+
+  header {
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+  }
+
+  .main-menu,
+  .sub-menu {
+    display: none;
+  }
+
+  .menu-icon {
+    font-size: 50px;
+  }
+
+  .accordion {
+    position: absolute;
+    background-color: #E9F1F9;
+    left: 0;
+    top: 60px;
+    right: 0;
+    text-align: center;
+    height: 100vh;
+  }
+
+
+  .ac_login,
+  .ac_join {
+    border: none;
+  }
+
+  .accordion-title {
+    border: 1px dotted #a0b2c4;
+    border-bottom: #1b437d;
+    padding: 20px;
+    font-weight: bold;
+  }
+
+  .accordion-item {
+    display: block;
+
+  }
+  .accordion {
+    position: fixed;
+    display: none;
+  }
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+  }
+  .accordion-content>ul>li {
+    padding: 10px;
+    background-color: #fff;
+    transition: .35s;
+  }
+
+  .accordion-content>ul>li:hover {
+    color: var(--decoinner);
+    background-color: #faf8f8;
+    font-weight: bold;
+    transition: .35s;
+  }
+
+
+  /* active 클래스가 추가되면 나타나도록 */
+  .accordion.active {
+    display: block;
+    z-index: 999;
+  }
+
+
+  /* 기본적으로 .accordion-content는 숨김 처리 */
+  .accordion-content {
+    display: none;
+  }
+  /* active 클래스가 추가되면 나타나도록 */
+  .accordion-content.active {
+    max-height: 200px; /* 실제 콘텐츠 높이에 맞게 설정 */
+    opacity: 1;
+  }
+  @media (max-width : 480px) {
+    /* 기본적으로 숨김 처리 */
+    .accordion {
+      display: none;
+    }
+    /* active 클래스가 추가되면 나타나도록 */
+    .accordion.active {
+      display: block;
+      z-index: 999;
+    }
+    /* 기본적으로 .accordion-content는 숨김 처리 */
+    .accordion-content {
+      display: none;
+    }
+    /* active 클래스가 추가되면 나타나도록 */
+    .accordion-content.active {
+      display: block;
+      z-index: 999;
+    }
+  }
+}
+
+
+/* 메인 공지사항 */
+
+  .main_inner{
+  width: 1464px;
+  margin: auto;
+  position: relative;
+  }
+
+.notice-section {
+    display: flex;
+    max-width: 1464px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.sidebar {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.notice{
+width: 230px;
+height: 130px;
+background:linear-gradient(var(--btnlogin),var(--btnshadow));
+color: #fff;
+box-shadow: 0 6px 1px #002641 ;
+border-radius: 10px 50px 10px 10px;
+text-align: center;
+line-height: 130px;
+font-weight: 700;
+font-size: 28px;}
+
+.notice_list{
+padding-top: 10px;
+box-sizing: border-box;
+overflow: hidden;
+border-radius: 20px;
+
+}
+
+.sidebar button {
+  
+  width: 230px;
+    padding: 15px;
+    background-color: #E9F1F9;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 16px;
+    border-bottom: 2px solid #fff;
+}
+.sidebar button:nth-child(1){
+  text-decoration: underline;
+  color: var(--btnshadow);
+
+}
+.sidebar button:hover{
+  color: var(--btnshadow);
+
+}
+.content {
+    width: 80%;
+    padding: 20px;
+}
+.content > p > em{
+ font-style: normal;
+  color: var(--btnshadow);
+  font-weight: bold;
+}
+
+.content h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.content_text ul{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 3%;
+  top: 12%;
+
+}
+.content_text ul li.after::after{
+  content: '\f105';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin: 0 5px;
+  color: #4d4d4d;
+}
+.content_text ul li.line:hover{
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    float: right;
+    margin-bottom: 20px;
+}
+
+.search-bar input,
+.search-bar select,
+.search-bar button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+button.search{
+background-color: var(--btnshadow);
+color: #fff;
+padding: 10px 20px;
+cursor: pointer;
+}
+
+
+
+table {
+  text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+
+    border: 1px solid #fff;
+}
+	th{
+  	background: #d8e1ee;
+  }
+
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+.pagination {
+    display: flex;
+    gap: 5px;
+}
+
+.pagination button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+/* Pagination. */
+.pagination {
+	padding: 1rem;
+	margin-bottom: 1rem;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+.pagination i{
+
+	font-size: 1.3rem;
+	cursor: pointer;
+}
+
+
+#numbers {
+	padding: 0;
+	margin: 0 2rem;
+	list-style-type: none;
+	display: flex;
+  color: black;
+}
+
+#numbers li a {
+	padding: 5px 9px;
+  margin: 0 5px;
+  border: 1px solid #D9D9D9;
+border-radius: 10px;
+}
+
+#numbers li a:hover {
+
+}
+
+#numbers li a.active {
+
+	background: var(--btnshadow);
+	color: white;
+}
+
+/* 배너 */
+.banner{
+
+  margin-top: 47px;
+  margin: 0 auto;
+  width: 1920px;
+  height: 115px;
+  
+  }
+  
+  .banner_inner{
+    margin: 0 auto;
+    width: 1464px;
+   height: 115px;
+   
+  }
+  span.banner_title{
+    float: left;
+    line-height: 115px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .bannerWrap{position: relative;
+
+  }
+  .bannerSwiper{
+
+  width:935px; height:115px;
+  
+  }  
+  .contols{
+
+    display: flex; gap: 10px;
+    position: absolute;
+    right: 0; top: 0;
+    margin-top: -50px;
+
+  }
+  .bannerSwiper > .swiper-wrapper > .swiper-slide{
+  
+  padding-top: 30px;}
+  
+  .bannerSwiper > .swiper-wrapper > .swiper-slide > a > img{
+    padding: 10px;
+    margin: 0 20px;
+    border: 1px solid  #e0e1e5;
+    border-radius: 10px;
+    transition: .35s;
+  
+    
+  }
+  
+  .bannerSwiper > .swiper-wrapper > .swiper-slide > a > img:hover{
+ border: 1px solid #4d4d4d;
+  }
+  .swiper-button-play,
+  .swiper-button-pause {
+  
+    cursor: pointer;
+    z-index: 10;
+  }
+
+
+
+
+  /* 배너 반응형 */
+
+  /* 1024px 이하 화면 */
+@media (max-width: 1024px) {
+  .bannerSwiper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .bannerSwiper > .swiper-wrapper > .swiper-slide > a > img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* 768px 이하 화면 */
+@media (max-width: 768px) {
+  .bannerSwiper {
+    width: 100%;
+    height: auto;
+  }
+  .bannerSwiper > .swiper-wrapper > .swiper-slide > a > img {
+    width: 60%;
+    height: auto;
+  }
+  .contols {
+   left: 0;
+   gap: 2px;
+  }
+}
+
+/* 480px 이하 화면 */
+@media (max-width: 480px) {
+  .bannerSwiper {
+    width: 100%;
+    height: auto;
+  }
+  .bannerSwiper > .swiper-wrapper > .swiper-slide > a > img {
+    width: 60%;
+    height: auto;
+  }
+  .contols {
+   left: 0;
+   gap: 2px;
+  }
+}
+
+/* 푸터 */
+.footer{
+
+  width: 1920px;
+  height: 170px;
+
+}
+
+.footer_inner{
+  margin: 0 auto;
+  width: 1464px;
+  height: 170px;
+
+   
+
+}
+
+.footer_content{
+color: #4d4d4d;
+  padding-top: 60px;
+  
+}
+
+.footer_logo{
+  float: left;
+  padding-left: 30px;
+}
+
+.footer_text{
+width: 800px;
+margin-left: 220px;
+margin-top: 8px;
+
+}
+
+
+ul.footer_right{
+  margin-top: -20px;
+  margin-right: 30px;
+  display: flex;
+  float: right;
+
+}
+
+
+/* 모달 로그인 */
+.modal_login{
+  background-color: #7575758a;
+  position: fixed;
+  left: 0;top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: none;
+
+}
+.log_in{
+  width: 450px;
+  height: 500px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--process);
+  border-radius: 20px; padding: 50px;
+ 
+}
+.modal_login > .log_in > h1{ 
+  color: #222;
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+  margin-bottom: 10px;}
+.log_in input[type=text],
+.log_in input[type=password]{
+  width: 100%; padding: 15px 10px;
+ border-radius: 10px;
+  background-color: #e9f3f4;
+  border: 1px solid #3EA2B8;
+}
+.log_in input[type=text],.log_in input[type=password]{
+  margin-bottom: 10px;
+  padding-left: 30px;
+}
+
+
+
+
+
+.log_in input[type=text]{
+  background: url(images/id_img.png) no-repeat center left 10px;
+  background-size: 4%;
+
+}
+.log_in input[type=password]{
+  background: url(images/password_img.png) no-repeat center left 10px;  ;
+  background-size: 4%;
+}
+
+.log_in input[type=button]{width: 100%;
+  background-color: var(--joinft);
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 15px;
+  border-radius: 50px;
+  box-shadow: 0 5px 1px #0D6679;
+  cursor: pointer; 
+  margin: 10px 0;
+  transition: .1s;    
+
+
+}
+
+.log_in input[type=button]:hover{ background-color: #0D6679;}
+
+label.check{
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+p.login_text {
+  font-size: 14px;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 15px;
+  
+}
+p.login_text > a{
+color: var(--joinft);
+text-decoration: underline;
+font-weight: 600;
+
+}
+
+.login_bottom{
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+
+}
+.pw:hover{color: #000 }
+.id:hover{color: #000 }
+.join:hover{color: #000 }
+          
+
+.xi-close{
+font-size: 36px;
+cursor: pointer;
+position: absolute;
+right: 15px; top: 15px;}
+
+/* show 클래스가 있을 때 모달 보이게 */
+.modal_login.show{ display: block;}
+
+
+#gototop{
+position: fixed;
+bottom: 0; 
+right: 3%;
+transition: 0.1s;
+background-image: url(images/topbutton.svg);
+width: 73px;
+height: 73px;
+opacity: 0;
+z-index: 998;
+}
+
+
+
+#gototop:hover{
+  background-image: url(./images/topbutton_hover.svg);
+  
+}
+
+#gototop.visible{
+  bottom: 8%; 
+  padding: 5px 25px;
+  opacity: 1;
+}
