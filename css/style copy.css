@@ -12,6 +12,11 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'GenShinGothic-Heavy';
+  src: url('../font/GenShinGothic-Heavy.ttf') format('truetype');
+}
+
 
 @import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
 
@@ -366,23 +371,22 @@ ul.sub>a {}
 
 .title {
   z-index: 9;
-  font-family: 'Tenada';
-  top: 257px;
+  top: 245px;
   position: absolute;
 }
 
 .title>h1 {
+  font-family: 'GenShinGothic-Heavy';
   color: #222;
   text-shadow: 2px 4px 1px rgba(0, 0, 0, 0.226);
-  font-family: 'Tenada';
-  font-size: 62px;
+  font-size: 58px;
   line-height: 62px;
 }
 
 .ft_white {
 
-  margin-right: 13px;
-  margin-left: 20px;
+  /* margin-right: 13px; */
+  margin-left: 15px;
   color: #fff;
 
 }
@@ -1318,11 +1322,11 @@ p.login_text>a {
 }
 
 
-.xi-close {
+.fa-xmark {
   font-size: 36px;
   cursor: pointer;
   position: absolute;
-  right: 15px;
+  right: 25px;
   top: 15px;
 }
 

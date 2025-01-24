@@ -5,6 +5,37 @@
   font-weight: 400;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'PretendardJP-Bold';
+  src: url("../font/PretendardJP-Bold.otf") format('opentype');
+}
+
+@font-face {
+  font-family: 'PretendardJP-ExtraBold';
+  src: url('../font/PretendardJP-ExtraBold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'PretendardJP-Medium';
+  src: url('../font/PretendardJP-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'PretendardJP-Regular';
+  src: url('../font/PretendardJP-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'PretendardJP-SemiBold';
+  src: url('../font/PretendardJP-SemiBold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'GenShinGothic-Heavy';
+  src: url('../font/GenShinGothic-Heavy.ttf') format('truetype');
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -23,11 +54,11 @@ button,
 input::placeholder,
 select,
 option {
-  font-family: 'Pretendard-Regular';
-  color:#4d4d4d;
+  font-family: 'PretendardJP-Regular';
+  color: #4d4d4d;
 }
 
-  
+
 
 
 a {
