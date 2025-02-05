@@ -732,7 +732,7 @@ font-weight: 600;
 .join:hover{color: #000 }
           
 
-.xi-close{
+.fa-xmark{
 font-size: 36px;
 cursor: pointer;
 position: absolute;
